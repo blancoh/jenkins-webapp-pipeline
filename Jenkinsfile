@@ -75,6 +75,23 @@ try {
       }
     }
  // }
+    // Run terraform destroy
+    stage('destroy') {
+      node {
+        withCredentials([[
+          $class: 'AmazonWebServicesCredentialsBinding',
+          credentialsId: credentialsId,
+          accessKeyVariable: 'AWS_ACCESS_KEY_ID',
+          secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
+        ]]) {
+          ansiColor('xterm') {
+            sh '/usr/local/bin/terraform-0.12.3 destroy -auto-approve'
+          }
+        }
+      }
+    }
+
+
   currentBuild.result = 'SUCCESS'
 }
 catch (org.jenkinsci.plugins.workflow.steps.FlowInterruptedException flowError) {
