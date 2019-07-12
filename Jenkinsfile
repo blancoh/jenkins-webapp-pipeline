@@ -75,6 +75,10 @@ try {
       }
     }
  // }
+    stage('Approval Input') {
+      input 'Approve destroy?'
+
+    }
     // Run terraform destroy
     stage('destroy') {
       node {
