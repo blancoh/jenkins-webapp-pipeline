@@ -41,6 +41,11 @@ try {
     }
   }
 
+  stage('Apply Approval Input') {
+      input 'Approve Terraform apply?'
+
+    }
+
  // if (env.BRANCH_NAME == 'master') {
 
     // Run terraform apply
@@ -75,8 +80,8 @@ try {
       }
     }
  // }
-    stage('Approval Input') {
-      input 'Approve destroy?'
+    stage('Destroy Approval Input') {
+      input 'Approve Terraform destroy?'
 
     }
     // Run terraform destroy
