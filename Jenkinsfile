@@ -53,7 +53,7 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-            sh /usr/local/bin/terraform-0.12.3 apply -auto-approve'
+            sh '/usr/local/bin/terraform-0.12.3 apply -auto-approve'
           }
         }
       }
@@ -69,7 +69,7 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-            sh /usr/local/bin/terraform-0.12.3 show
+            sh '/usr/local/bin/terraform-0.12.3 show'
           }
         }
       }
