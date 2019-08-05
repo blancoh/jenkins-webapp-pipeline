@@ -15,6 +15,8 @@ Jenkins Pipeline plugin - https://wiki.jenkins.io/display/JENKINS/Pipeline+Plugi
 
 Jenkins GIT plugin - https://wiki.jenkins.io/display/JENKINS/Git+Plugin
 
+Jenkins AWS Cloudbees plugin - https://wiki.jenkins.io/display/JENKINS/CloudBees+AWS+Credentials+Plugin
+
 Terraform - https://www.terraform.io/downloads.html
 
 Extra files. Rename extension to .tf to use.
