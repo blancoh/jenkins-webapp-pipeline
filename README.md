@@ -7,6 +7,7 @@ Project Goals:
 3) Destroy all EC2 instances, load balancers, gateways and eventually the entire Amazon VPC.
 
 Unused files:
+
 alb.tf-unused - Configuration for Application Load Balancer
 
 elb.tf-unused - Configuration for Elastic Load Balancer
