@@ -3,5 +3,5 @@
 Project Goals:
 
 1) Create an Amazon VPC
-2) Build 3 Nginx servers using an autoscaling group with a Network Load Balancer.
+2) Create an autoscaling group of Nginx HTTP servers with a Network Load Balancer on port 80. Desired state: 3 VMs.
 3) Destroy Amazon VPC
