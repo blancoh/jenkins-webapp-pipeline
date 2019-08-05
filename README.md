@@ -7,10 +7,15 @@ Project Goals:
 3) Destroy all EC2 instances, load balancers, gateways and eventually the entire Amazon VPC.
 
 Requirements:
+
 Jenkins - https://jenkins.io/
+
 Jenkins Pipeline plugin - https://wiki.jenkins.io/display/JENKINS/Pipeline+Plugin
+
 Jenkins GIT plugin - https://wiki.jenkins.io/display/JENKINS/Git+Plugin
+
 Terraform - https://www.terraform.io/downloads.html
+
 AWS CLI - https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
 
 Extra files. Rename extension to .tf to use.
