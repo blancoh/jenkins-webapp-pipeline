@@ -1,4 +1,4 @@
-# jenkins-pipeline
+# jenkins-webapp-pipeline
 
 Project Goals:
 
