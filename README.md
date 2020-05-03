@@ -5,7 +5,7 @@ Project Goals:
 1) Create an Amazon VPC with 3 public subnets and 3 private subnets. 
 2) Create an autoscaling group of 3 Web servers in public subnets with network (nlb) load Balancer for port 80.
 3) Todo: Create a 3 node MySQL Galera cluster in the private subnets with an internal load balancer.
-4) Destroy all EC2 instances, load balancers, subnets, gateways and eventually the entire Amazon VPC.
+4) Destroy the entire Amazon VPC when finished.
 
 Requirements:
 
