@@ -1,6 +1,5 @@
 variable "public_key_path" {
-   default = "/root/.ssh/id_rsa.pub"
-  #default = "/apps/terraform/keys/id_rsa.pub"
+   default = "/var/lib/jenkins/.ssh/id_rsa.pub"
 }
 
 variable "key_name" {
