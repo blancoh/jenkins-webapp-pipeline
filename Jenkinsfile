@@ -19,7 +19,7 @@ try {
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
       ]]) {
         ansiColor('xterm') {
-          sh '/usr/local/bin/terraform-0.12.3 init'
+          sh '/usr/local/bin/terraform init'
         }
       }
     }
@@ -35,7 +35,7 @@ try {
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
       ]]) {
         ansiColor('xterm') {
-          sh '/usr/local/bin/terraform-0.12.3 plan'
+          sh '/usr/local/bin/terraform plan'
         }
       }
     }
@@ -58,7 +58,7 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-            sh '/usr/local/bin/terraform-0.12.3 apply -auto-approve'
+            sh '/usr/local/bin/terraform apply -auto-approve'
           }
         }
       }
@@ -74,7 +74,7 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-            sh '/usr/local/bin/terraform-0.12.3 show'
+            sh '/usr/local/bin/terraform show'
           }
         }
       }
@@ -94,7 +94,7 @@ try {
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
           ansiColor('xterm') {
-            sh '/usr/local/bin/terraform-0.12.3 destroy -auto-approve'
+            sh '/usr/local/bin/terraform destroy -auto-approve'
           }
         }
       }
