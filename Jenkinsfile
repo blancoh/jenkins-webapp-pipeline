@@ -13,12 +13,7 @@ try {
   // Run terraform init
   stage('Terraform init') {
     node {
-      withCredentials([[
-        $class: 'AmazonWebServicesCredentialsBinding',
-        credentialsId: credentialsId,
-        accessKeyVariable: 'AWS_ACCESS_KEY_ID',
-        secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
-      ]]) {
+      withAWS(credentials: aws_creds, region: 'us-east-1') {
         ansiColor('xterm') {
           sh '/usr/local/bin/terraform init'
         }
@@ -29,12 +24,7 @@ try {
   // Run terraform plan
   stage('Terraform plan') {
     node {
-      withCredentials([[
-        $class: 'AmazonWebServicesCredentialsBinding',
-        credentialsId: credentialsId,
-        accessKeyVariable: 'AWS_ACCESS_KEY_ID',
-        secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
-      ]]) {
+      withAWS(credentials: aws_creds, region: 'us-east-1') {
         ansiColor('xterm') {
           sh '/usr/local/bin/terraform plan'
         }
@@ -52,12 +42,7 @@ try {
     // Run terraform apply
     stage('Terraform apply') {
       node {
-        withCredentials([[
-          $class: 'AmazonWebServicesCredentialsBinding',
-          credentialsId: credentialsId,
-          accessKeyVariable: 'AWS_ACCESS_KEY_ID',
-          secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
-        ]]) {
+        withAWS(credentials: aws_creds, region: 'us-east-1') {
           ansiColor('xterm') {
             sh '/usr/local/bin/terraform apply -auto-approve'
           }
@@ -68,12 +53,7 @@ try {
     // Run terraform show
     stage('Terraform show') {
       node {
-        withCredentials([[
-          $class: 'AmazonWebServicesCredentialsBinding',
-          credentialsId: credentialsId,
-          accessKeyVariable: 'AWS_ACCESS_KEY_ID',
-          secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
-        ]]) {
+        withAWS(credentials: aws_creds, region: 'us-east-1') {
           ansiColor('xterm') {
             sh '/usr/local/bin/terraform show'
           }
@@ -88,12 +68,7 @@ try {
     // Run terraform destroy
     stage('Terraform destroy') {
       node {
-        withCredentials([[
-          $class: 'AmazonWebServicesCredentialsBinding',
-          credentialsId: credentialsId,
-          accessKeyVariable: 'AWS_ACCESS_KEY_ID',
-          secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
-        ]]) {
+        withAWS(credentials: aws_creds, region: 'us-east-1') {
           ansiColor('xterm') {
             sh '/usr/local/bin/terraform destroy -auto-approve'
           }
