@@ -2,9 +2,6 @@
 String credentialsId = 'awsCredentials'
 
 try {
-  tools{
-    terraform 'terraform-14'
-  }
   
   stage('GIT checkout') {
     node {
