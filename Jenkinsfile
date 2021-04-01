@@ -13,7 +13,7 @@ try {
   // Run terraform init
   stage('Terraform init') {
     node {
-      withAWS(credentials: aws_creds, region: 'us-east-1') {
+      withAWS(credentials: 'aws_creds', region: 'us-east-1') {
         ansiColor('xterm') {
           sh '/usr/local/bin/terraform init'
         }
@@ -24,7 +24,7 @@ try {
   // Run terraform plan
   stage('Terraform plan') {
     node {
-      withAWS(credentials: aws_creds, region: 'us-east-1') {
+      withAWS(credentials: 'aws_creds', region: 'us-east-1') {
         ansiColor('xterm') {
           sh '/usr/local/bin/terraform plan'
         }
@@ -42,7 +42,7 @@ try {
     // Run terraform apply
     stage('Terraform apply') {
       node {
-        withAWS(credentials: aws_creds, region: 'us-east-1') {
+        withAWS(credentials: 'aws_creds', region: 'us-east-1') {
           ansiColor('xterm') {
             sh '/usr/local/bin/terraform apply -auto-approve'
           }
@@ -53,7 +53,7 @@ try {
     // Run terraform show
     stage('Terraform show') {
       node {
-        withAWS(credentials: aws_creds, region: 'us-east-1') {
+        withAWS(credentials: 'aws_creds', region: 'us-east-1') {
           ansiColor('xterm') {
             sh '/usr/local/bin/terraform show'
           }
@@ -68,7 +68,7 @@ try {
     // Run terraform destroy
     stage('Terraform destroy') {
       node {
-        withAWS(credentials: aws_creds, region: 'us-east-1') {
+        withAWS(credentials: 'aws_creds', region: 'us-east-1') {
           ansiColor('xterm') {
             sh '/usr/local/bin/terraform destroy -auto-approve'
           }
