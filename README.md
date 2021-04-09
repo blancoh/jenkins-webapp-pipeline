@@ -19,7 +19,7 @@ Jenkins CloudBees AWS Credentials plugin - https://wiki.jenkins.io/display/JENKI
 
 Terraform - https://www.terraform.io/downloads.html
 
-Extra files. Rename extension to .tf to use.
+Extra files. Rename extensions to .tf to use.
 
 alb.tf-unused - Configuration for Application Load Balancer
 
