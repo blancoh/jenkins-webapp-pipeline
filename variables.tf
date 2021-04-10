@@ -3,7 +3,8 @@ variable "aws_access_key" {}
 variable "aws_secret_key" {}
 
 variable "public_key_path" {
-   default = "/var/lib/jenkins/.ssh/id_rsa.pub"
+   #default = "/var/lib/jenkins/.ssh/id_rsa.pub"
+   default = "C:\Users\Blanc\.ssh\id_rsa.pub"
 }
 
 variable "key_name" {
