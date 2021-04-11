@@ -46,7 +46,7 @@ variable "public_subnet_b" {
 }
 
 variable "public_subnet_c" {
-  default     = "10.0.8.0/24"
+  default     = "10.0.6.0/24"
   description = "Public subnet AZ C"
 }
 
