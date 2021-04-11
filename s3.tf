@@ -9,7 +9,7 @@ lifecycle {
       prevent_destroy = true
     }
      
-tags {
-      Name = "Terraform State File Storage"
-    }      
+#tags {
+ #     Name = "Terraform State File Storage"
+  #  }      
 }
