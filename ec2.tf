@@ -25,7 +25,7 @@ EOF
 }
 
 resource "aws_autoscaling_group" "autoscale_group" {
-  name                 = "terraform-asg-example"
+  name                 = "terraform-asg-001"
   launch_configuration = aws_launch_configuration.autoscale_web.id
   vpc_zone_identifier  = [aws_subnet.PrivateSubnetA.id, aws_subnet.PrivateSubnetB.id, aws_subnet.PrivateSubnetC.id]
   target_group_arns    = [aws_lb_target_group.nlb_target_group.arn]
@@ -52,6 +52,12 @@ resource "aws_security_group" "sec_web" {
   vpc_id      = aws_vpc.default.id
 
   # HTTP access from anywhere
+   ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
   ingress {
     from_port   = 80
     to_port     = 80
