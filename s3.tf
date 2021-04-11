@@ -1,15 +1,15 @@
 resource "aws_s3_bucket" "terraform_state_s3_bucket" {
-    bucket = "terraform-state-file-storage"
+    bucket = "blancohappz-terraform-storage"
      
-    versioning {
+versioning {
       enabled = true
     }
      
-    lifecycle {
+lifecycle {
       prevent_destroy = true
     }
      
-    tags {
+tags {
       Name = "Terraform State File Storage"
     }      
 }
