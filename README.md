@@ -7,6 +7,6 @@ Project Goals:
 3) Destroy all when finished.
 
 Supported Providers:
-AWS (Working)
-GCP (Planned)
-Azure (Planned)
+1) AWS (Working)
+2) GCP (Planned)
+3) Azure (Planned)
