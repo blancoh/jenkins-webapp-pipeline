@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "terraform_state_s3_bucket" {
-    bucket = "blancohappz-terraform-storage"
+    bucket = "dhmf-terraform-storage"
      
 versioning {
       enabled = true
