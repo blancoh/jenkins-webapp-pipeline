@@ -36,32 +36,32 @@ variable "vpc_cidr" {
 }
 
 variable "public_subnet_a" {
-  default     = "10.0.0.0/24"
+  default     = "10.0.1.0/24"
   description = "Public subnet AZ A"
 }
 
 variable "public_subnet_b" {
-  default     = "10.0.4.0/24"
+  default     = "10.0.3.0/24"
   description = "Public subnet AZ B"
 }
 
 variable "public_subnet_c" {
-  default     = "10.0.6.0/24"
+  default     = "10.0.5.0/24"
   description = "Public subnet AZ C"
 }
 
 variable "private_subnet_a" {
-  default     = "10.0.1.0/24"
+  default     = "10.0.2.0/24"
   description = "Private subnet AZ A"
 }
 
 variable "private_subnet_b" {
-  default     = "10.0.5.0/24"
+  default     = "10.0.2.0/24"
   description = "Private subnet AZ B"
 }
 
 variable "private_subnet_c" {
-  default     = "10.0.9.0/24"
+  default     = "10.0.6.0/24"
   description = "Private subnet AZ C"
 }
 
