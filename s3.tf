@@ -4,7 +4,7 @@ terraform {
     key    = "terraform.tfstate"
     region = "us-east-1"
     encrypt        = true
-    dynamodb_table = "dynamo"
+    dynamodb_table = "terraform-lock"
   }
 }
 #resource "aws_s3_bucket" "terraform-bucket-alex" {
