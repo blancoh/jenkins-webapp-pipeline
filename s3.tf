@@ -3,7 +3,7 @@ terraform {
     bucket = "mybucket0000001"
     key    = "terraform.tfstate"
     region = "us-east-1"
-    #encrypt        = true
+    encrypt        = true
     dynamodb_table = "dynamo"
   }
 }
