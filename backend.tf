@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "mybucket00000002"
+    bucket = "blancohappz-webapp"
     key    = "terraform-webapp.tfstate"
     region = "us-east-1"
     encrypt        = true
