@@ -11,7 +11,7 @@ try {
   }
 
   // Run terraform init
-  stage('Terraform init') {
+  stage('Terraform Init') {
     node {
       withAWS(credentials: 'aws_creds', region: 'us-east-1') {
         ansiColor('xterm') {
@@ -22,7 +22,7 @@ try {
   }
 
   // Run terraform plan
-  stage('Terraform plan') {
+  stage('Terraform Plan') {
     node {
       withAWS(credentials: 'aws_creds', region: 'us-east-1') {
         ansiColor('xterm') {
@@ -40,7 +40,7 @@ try {
  // if (env.BRANCH_NAME == 'master') {
 
     // Run terraform apply
-    stage('Terraform apply') {
+    stage('Terraform Apply') {
       node {
         withAWS(credentials: 'aws_creds', region: 'us-east-1') {
           ansiColor('xterm') {
@@ -51,7 +51,7 @@ try {
     }
 
     // Run terraform show
-    stage('Terraform show') {
+    stage('Terraform Show') {
       node {
         withAWS(credentials: 'aws_creds', region: 'us-east-1') {
           ansiColor('xterm') {
@@ -66,7 +66,7 @@ try {
 
     }
     // Run terraform destroy
-    stage('Terraform destroy') {
+    stage('Terraform Destroy') {
       node {
         withAWS(credentials: 'aws_creds', region: 'us-east-1') {
           ansiColor('xterm') {
