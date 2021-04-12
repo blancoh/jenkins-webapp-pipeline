@@ -1,4 +1,3 @@
-// Jenkinsfile
 String credentialsId = 'awsCredentials'
 
 try {
@@ -10,7 +9,6 @@ try {
     }
   }
 
-  // Run terraform init
   stage('Terraform Init') {
     node {
       withAWS(credentials: 'aws_creds', region: 'us-east-1') {
@@ -21,7 +19,6 @@ try {
     }
   }
 
-  // Run terraform plan
   stage('Terraform Plan') {
     node {
       withAWS(credentials: 'aws_creds', region: 'us-east-1') {
@@ -37,9 +34,6 @@ try {
 
     }
 
- // if (env.BRANCH_NAME == 'master') {
-
-    // Run terraform apply
     stage('Terraform Apply') {
       node {
         withAWS(credentials: 'aws_creds', region: 'us-east-1') {
@@ -50,7 +44,6 @@ try {
       }
     }
 
-    // Run terraform show
     stage('Terraform Show') {
       node {
         withAWS(credentials: 'aws_creds', region: 'us-east-1') {
@@ -60,12 +53,12 @@ try {
         }
       }
     }
- // }
+
     stage('Destroy Approval Input') {
       input 'Approve Terraform destroy?'
 
     }
-    // Run terraform destroy
+
     stage('Terraform Destroy') {
       node {
         withAWS(credentials: 'aws_creds', region: 'us-east-1') {
