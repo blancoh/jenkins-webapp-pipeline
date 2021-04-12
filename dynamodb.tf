@@ -9,7 +9,8 @@ resource "aws_dynamodb_table" "terraform_state_locking_dynamodb" {
         type = "S"
       }
      
-   #tags {
-    #    Name = "Terraform State File Locking"
-     # }
-    }
+   tags = {
+        Name = "Terraform State File Locking"
+        Environment = "production"
+      }
+}
