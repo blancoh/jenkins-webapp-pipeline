@@ -37,7 +37,7 @@ resource "aws_autoscaling_group" "autoscale_group" {
 
   #  load_balancers = ["${aws_elb.elb.name}"]
   min_size                  = 3
-  max_size                  = 6
+  max_size                  = 3
   health_check_grace_period = 60
   health_check_type         = "ELB"
   desired_capacity          = 3
