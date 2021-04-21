@@ -3,8 +3,8 @@
 #variable "aws_secret_key" {}
 
 variable "public_key_path" {
-   default = "/var/lib/jenkins/.ssh/id_rsa.pub"
-   #default = "C:\\Users\\Blanc\\.ssh\\id_rsa.pub"
+  default = "/var/lib/jenkins/.ssh/id_rsa.pub"
+  #default = "C:\\Users\\Blanc\\.ssh\\id_rsa.pub"
 }
 
 variable "key_name" {
@@ -20,8 +20,8 @@ variable "aws_region" {
 # Ubuntu Bionic 18.04 LTS (x64)
 variable "aws_amis" {
   default = {
-    #eu-west-1 = "ami-01e6a0b85de033c99"
-    us-east-1 = "ami-026c8acd92718196b"
+  us-east-1 = "ami-072afab67fc409af2"
+    # us-east-1 = "ami-026c8acd92718196b"
   }
 }
 
@@ -64,4 +64,3 @@ variable "private_subnet_c" {
   default     = "10.0.6.0/24"
   description = "Private subnet AZ C"
 }
-
