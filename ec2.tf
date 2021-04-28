@@ -5,8 +5,7 @@ resource "aws_key_pair" "auth" {
 
 resource "aws_launch_configuration" "autoscale_web" {
   name_prefix     = "webserver-"
-  #image_id        = var.aws_amis[var.aws_region]
-  image_id       = "ami-02aedf246b2c43e91"
+  image_id        = var.aws_amis[var.aws_region]
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.sec_web.id]
   key_name        = aws_key_pair.auth.id
