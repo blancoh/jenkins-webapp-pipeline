@@ -20,7 +20,7 @@ variable "aws_region" {
 # Ubuntu Bionic 18.04 LTS (x64)
 variable "aws_amis" {
   default = {
-  us-east-1 = "ami-072afab67fc409af2"
+  us-east-1 = "ami-063b319daaba279be"
   }
 }
 
